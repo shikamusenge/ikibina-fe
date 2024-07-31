@@ -177,7 +177,7 @@ const Penalities = () => {
       </div>
     </div>
   );
-  return <Layout main={main} />;
+  return <Layout main={main} page={"ibihano"} />;
 };
 
 export default Penalities;

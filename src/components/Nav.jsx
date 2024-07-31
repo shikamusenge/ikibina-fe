@@ -4,7 +4,7 @@ import navs from "../utils/navs";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const Nav = ({ role, page }) => {
+const Nav = ({ role, page = "abanyamuryango" }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Nav = ({ role, page }) => {
       : navs.member;
   return (
     <nav className="flex">
-      <div className="brand i-center" style={{ gap: "10px" }}>
+      <div className="brand i-center" style={{ gap: "10px", fontSize: "30px" }}>
         <FaBars style={{ display: "none" }} />{" "}
         <div className="txt-xl">
           IKI<span className="txt-success">BINA</span>

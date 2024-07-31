@@ -30,7 +30,7 @@ const SupperAdminHome = () => {
       </div>
     </div>
   );
-  return <Layout main={main} role={"supperadmin"} />;
+  return <Layout main={main} role={"supperadmin"} page={"dashboard"} />;
 };
 
 export default SupperAdminHome;

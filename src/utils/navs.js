@@ -5,10 +5,6 @@ const navs = {
       path: "/uhagarariye",
     },
     {
-      text: "users",
-      path: "/uhagarariye/user",
-    },
-    {
       text: "abanyamuryango",
       path: "/uhagarariye/abanyamuryango",
     },
@@ -23,6 +19,10 @@ const navs = {
     {
       text: "Raporo",
       path: "/uhagarariye/raporo",
+    },
+    {
+      text: "users",
+      path: "/uhagarariye/user",
     },
     {
       text: "gusohoka",

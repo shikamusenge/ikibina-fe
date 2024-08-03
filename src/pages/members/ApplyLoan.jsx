@@ -135,7 +135,7 @@ const ApplyLoan = () => {
       </div>
     </div>
   );
-  return <Layout main={main} role={"member"} page={"inguzanyo"} />;
+  return <Layout main={main} page={"inguzanyo"} role={"member"} />;
 };
 
 export default ApplyLoan;

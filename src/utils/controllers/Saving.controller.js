@@ -13,5 +13,17 @@ class SavingController {
       console.log(error);
     }
   }
+  async Update(data) {
+    try {
+      const Reponse = await server.put("/saving", data, {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      });
+      return Reponse;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 export default SavingController;

@@ -83,7 +83,7 @@ const MyLoans = () => {
       </div>
     </div>
   );
-  return <Layout main={main} page={"inguzanyo"} />;
+  return <Layout main={main} page={"inguzanyo"} role={"member"} />;
 };
 
 export default MyLoans;

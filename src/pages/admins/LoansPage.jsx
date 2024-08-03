@@ -151,7 +151,7 @@ const LoansPage = () => {
                       ? "irategereje"
                       : item.lstatus == "active"
                       ? "yarakiriwe"
-                      : item.lstatus == "completed"
+                      : item.lstatus == "paid"
                       ? "yarishyuwe"
                       : "ntiyemewe"}
                   </td>
@@ -177,6 +177,47 @@ const LoansPage = () => {
                           className="btn-sm"
                         >
                           reject
+                        </div>
+                      </td>
+                    </>
+                  )}
+                  {item.lstatus == "active" && (
+                    <>
+                      <td>
+                        <div
+                          className={`btn-sm ${loading && "btn-disbled"}`}
+                          onClick={async (e) => {
+                            e.preventDefault();
+                            const maxpay = Number(
+                              item.amountTopay - Number(item.payedAmount)
+                            );
+                            const payment = Number(
+                              prompt(`Enter amount to pay max(${maxpay})`)
+                            );
+                            if (!payment || payment > maxpay || payment <= 0) {
+                              return alert("injizamo amafaranga neza");
+                            }
+                            const status =
+                              maxpay == payment ? "paid" : "active";
+                            const payLoad = {
+                              amount: payment,
+                              status: status,
+                              loanId: item.loanId,
+                            };
+                            try {
+                              await server.put("/loans/pay", payLoad);
+                              alert("payment success");
+                              getLoans();
+                              // !loading && handleAction(item.loanId, "active");
+                            } catch (error) {
+                              alert(
+                                "something went wrong try again after some time"
+                              );
+                              console.log(error);
+                            }
+                          }}
+                        >
+                          ishyura
                         </div>
                       </td>
                     </>

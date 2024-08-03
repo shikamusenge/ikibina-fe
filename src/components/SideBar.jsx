@@ -12,7 +12,18 @@ const SideBar = ({ role }) => {
       </div>
       <hr />
       {role !== "member" && (
-        <div className="">
+        <>
+          <div className="">
+            <div className="btn btn-primary">
+              <Link
+                to={"/uhagarariye/ubwizigame"}
+                className="t-light"
+                style={{ color: "white" }}
+              >
+                UBWIZIGAME
+              </Link>
+            </div>
+          </div>
           <div className="btn btn-primary">
             <Link
               to={"/uhagarariye/kwizigama"}
@@ -22,7 +33,7 @@ const SideBar = ({ role }) => {
               KWIZIGAMA
             </Link>
           </div>
-        </div>
+        </>
       )}
       {role == "member" && (
         <div className="">

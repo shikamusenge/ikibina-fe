@@ -14,6 +14,7 @@ import MyLoans from "./pages/members/Loan";
 import LoansPage from "./pages/admins/LoansPage";
 import Users from "./pages/admins/Users";
 import MemberSavings from "./pages/admins/MemberSavings";
+import Report from "./pages/admins/Report";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/uhagarariye/ubwizigame" element={<MemberSavings />} />
         <Route path="/uhagarariye/ibihano" element={<Penalities />} />
         <Route path="/uhagarariye/inguzanyo" element={<LoansPage />} />
+        <Route path="/uhagarariye/raporo" element={<Report />} />
         <Route path="/uhagarariye/user" element={<Users />} />
         <Route path="/umunyamuryango" element={<MemberHome />} />
         <Route path="/umunyamuryango/inguzanyo" element={<MyLoans />} />

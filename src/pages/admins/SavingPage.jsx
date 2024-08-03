@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { FaFilter } from "react-icons/fa6";
 import Layout from "../../components/Layout";
 import { useCallback, useState } from "react";
 import PopUp from "../../components/PopUp";
@@ -10,7 +9,6 @@ import SavingForm from "../../components/SavingForm";
 
 const SavingPage = () => {
   const [popOpen, setPopOpen] = useState(false);
-  const [search, setSearch] = useState("");
   const [members, setMembers] = useState([]);
   const [curentMember, setCurrentMember] = useState({});
   const [total, setTotal] = useState(0);
@@ -45,19 +43,7 @@ const SavingPage = () => {
         >
           KWIZIGAMA KW&apos; ABANYAMURYANGO
         </h3>
-        <div className="i-center">
-          <div style={{ height: "2rem", marginBlock: "auto" }}>
-            <FaFilter />{" "}
-            <input
-              type="search"
-              className="form-control"
-              onChange={(e) => {
-                setSearch(e.target.value);
-                console.log(search);
-              }}
-            />
-          </div>
-        </div>
+        <div className="i-center"></div>
 
         <div></div>
       </div>
